@@ -1,11 +1,11 @@
 import React, {cloneElement} from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import styles from '../styles/main.css';
+import animations from '../styles/animations.scss';
 
 const Main = (props) =>
   <div className='main-container'>
     <ReactCSSTransitionGroup
-      transitionName={styles}
+      transitionName={animations}
       transitionEnterTimeout={500}
       transitionLeaveTimeout={500}>
       {cloneElement(props.children, {key: props.location.pathname})}
